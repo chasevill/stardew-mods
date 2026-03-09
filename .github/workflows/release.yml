@@ -1,0 +1,28 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Create release asset zip
+        run: |
+          mkdir -p release-asset
+          cp AutomaticTodoList/manifest.json release-asset/
+          cp -r AutomaticTodoList/i18n release-asset/
+          cd release-asset && zip -r ../AutomaticTodoList-release.zip . && cd ..
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: AutomaticTodoList-release.zip
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

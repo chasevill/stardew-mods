@@ -3,6 +3,7 @@
 *.user
 *.userosscache
 *.sln.docstates
+stardewvalley.targets
 
 # build results
 [Dd]ebug/
