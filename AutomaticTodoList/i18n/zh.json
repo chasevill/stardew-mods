@@ -64,6 +64,5 @@
     "items.traveling-merchant.text": "访问旅行商人的货车",
     "items.waterable-crops.text": "给作物浇水（{{location}}），还剩 {{remaining}} 个",
     "items.animals.single.text": "爱抚 {{animal}}",
-    "items.animals.text": "爱抚 {{petted}}/{{total}} 只动物",
-    "items.animals.byType.text": "爱抚 {{petted}}/{{total}} {{type}}"
+    "items.animals.byType.text": "抚摸动物 ({{type}})（剩余 {{remaining}}）"
 }

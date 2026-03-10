@@ -64,6 +64,5 @@
     "items.traveling-merchant.text": "Visitar o carrinho de Viagem",
     "items.waterable-crops.text": "Regar plantações ({{location}}) ({{remaining}} restantes)",
     "items.animals.single.text": "Acariciar {{animal}}",
-    "items.animals.text": "Acariciar {{petted}}/{{total}} animais",
-    "items.animals.byType.text": "Acariciar {{petted}}/{{total}} {{type}}"
+    "items.animals.byType.text": "Acariciar animais ({{type}}) ({{remaining}} restantes)"
 }

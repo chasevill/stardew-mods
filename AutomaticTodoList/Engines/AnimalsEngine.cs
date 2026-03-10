@@ -19,7 +19,7 @@ internal class AnimalsEngine(
             return;
 
         var all = farm.getAllFarmAnimals();
-
+        
         // build a dictionary location -> list of animals in that location
         var byLocation = all
             .Where(a => a != null && a.health.Value > 0)

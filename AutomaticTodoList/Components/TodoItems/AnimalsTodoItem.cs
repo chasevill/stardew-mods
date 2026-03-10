@@ -27,7 +27,7 @@ internal class AnimalsTodoItem(string group, bool isChecked = false)
         int total = matching.Count(a => a.health.Value > 0);
         int petted = matching.Count(a => a.health.Value > 0 &&
                                          (a.wasPet.Value || a.health.Value <= 0));
-        return I18n.Items_Animals_ByType_Text(petted, total, this.Group);
+        return I18n.Items_Animals_ByType_Text(this.Group, total-petted);
     }
 
     public override void OnUpdateTicked(UpdateTickedEventArgs e)
