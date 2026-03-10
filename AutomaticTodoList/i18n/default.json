@@ -65,5 +65,5 @@
     "items.waterable-crops.text": "Water crops ({{location}}) ({{remaining}} remaining)",
     "items.animals.single.text": "Pet {{animal}}",
     "items.animals.text": "Pet {{petted}}/{{total}} animals",
-    "items.animals.byType.text": "Pet {{petted}}/{{total}} {{type}}"
+    "items.animals.byType.text": "Pet Animals ({{type}}) ({{petted}}/{{total}})"
 }
