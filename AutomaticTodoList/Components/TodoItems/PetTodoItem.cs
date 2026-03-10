@@ -1,6 +1,7 @@
 using System.Reflection;
 using AutomaticTodoList.Models;
 using StardewModdingAPI.Events;
+using StardewModdingAPI;
 using StardewValley;
 
 namespace AutomaticTodoList.Components.TodoItems;
@@ -36,21 +37,14 @@ internal class PetTodoItem : BaseTodoItem
     /// <summary>Determine whether the given pet object has been petted today.</summary>
     public static bool HasBeenPetted(object pet)
     {
-        // the underlying "wasPet" field is a NetBool on FarmAnimal; use reflection so we
-        // don't need to worry about the concrete type (Pet/NPC) at compile time.
-        var prop = pet.GetType().GetProperty("wasPet");
-        if (prop is null)
-            return false;
-
-        object? netBool = prop.GetValue(pet);
-        if (netBool is null)
-            return false;
-
-        var valueProp = netBool.GetType().GetProperty("Value");
-        if (valueProp is null)
-            return false;
-
-        return valueProp.GetValue(netBool) is bool b && b;
+        if (pet is StardewValley.Characters.Pet housePet)
+        {
+            bool petted = housePet.lastPetDay.TryGetValue(Game1.player.UniqueMultiplayerID, out int lastDay) 
+                      && lastDay == Game1.Date.TotalDays;
+        
+            return petted;        
+        }
+        return false;
     }
 
     /// <summary>Get a human-readable name for the pet (name assigned by the player, or

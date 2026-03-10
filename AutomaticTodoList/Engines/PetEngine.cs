@@ -12,9 +12,6 @@ internal class PetEngine(
 {
     public override void UpdateItems()
     {
-        if (!this.IsEnabled())
-            return;
-
         var pet = Game1.player.getPet();
         if (pet is null)
             return;

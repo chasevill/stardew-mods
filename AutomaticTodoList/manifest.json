@@ -1,10 +1,10 @@
 {
     "Name": "Automatic To-do List [Fork]",
     "Author": "ChaseVill",
-    "Version": "1.5.0-fork-dev",
+    "Version": "1.5.3",
     "Description": "Automatic task management for common tasks. Forked from Automatic To-do List by VoxaelFox.",
     "UniqueID": "ChaseVill.AutomaticTodoList",
     "EntryDll": "AutomaticTodoList.dll",
     "MinimumApiVersion": "4.0.0",
-    "UpdateKeys": []
+    "UpdateKeys": [ "Nexus:43468" ]
 }

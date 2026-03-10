@@ -23,7 +23,7 @@
     "config.checks.harvestable-crops.toggle.description": "Whether or not to add to-do items for harvesting crops in various locations",
     "config.checks.waterable-crops.toggle.name": "Check Waterable Crops",
     "config.checks.waterable-crops.toggle.description": "Whether or not to add to-do items for watering crops in various locations",
-    "config.checks.unpetted-animals.toggle.name": "Check unpetted pets",
+    "config.checks.unpetted-animals.toggle.name": "Check Unpetted Animals",
     "config.checks.unpetted-animals.toggle.description": "Whether or not to add to-do items for pets that haven't been petted today",
     "config.checks.ready-machines.toggle.name": "Check Ready Machines",
     "config.checks.ready-machines.toggle.description": "Whether or not to add to-do items for emptying ready machines in various locations",
